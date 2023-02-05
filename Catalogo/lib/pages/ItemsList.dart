@@ -76,7 +76,7 @@ class ItemsList extends StatelessWidget {
                   SizedBox(height: 7.0),
                   Text(price,
                       style: TextStyle(
-                          color: Colors.red[700],
+                          color: Colors.brown[700],
                           fontFamily: 'Varela',
                           fontSize: 14.0)),
                   Text(name,
@@ -94,11 +94,11 @@ class ItemsList extends StatelessWidget {
                           children: [
                             if (!added) ...[
                               Icon(Icons.shopping_basket,
-                                  color: Colors.red[700], size: 12.0),
+                                  color: Colors.brown[700], size: 12.0),
                               Text('Add to cart',
                                   style: TextStyle(
                                       fontFamily: 'Varela',
-                                      color: Colors.red[700],
+                                      color: Colors.brown[700],
                                       fontSize: 12.0))
                             ],
                             if (added) ...[

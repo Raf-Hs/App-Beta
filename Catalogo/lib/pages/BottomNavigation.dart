@@ -1,3 +1,4 @@
+import 'package:Deadmans/pages/catalogo.dart';
 import 'package:flutter/material.dart';
 
 class CookingNavigator extends StatelessWidget {
@@ -26,6 +27,16 @@ class CookingNavigator extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
                           Icon(Icons.search, color: Color(0xFF676E79)),
+                          /*GestureDetector(
+                            onTap: () => Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return MyApp();
+                                },
+                              ),
+                            ),
+                          ),*/
                         ],
                       )),
                   Container(
@@ -34,7 +45,19 @@ class CookingNavigator extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
-                          Icon(Icons.shopping_basket, color: Color(0xFF676E79))
+                          Icon(Icons.book, color: Color(0xFF676E79))
+
+                          /*GestureDetector(
+                            onTap: () => Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return Historial();
+                                },
+                              ),
+                            ),
+                          ),
+                          */
                         ],
                       )),
                 ])));

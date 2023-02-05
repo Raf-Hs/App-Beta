@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:Deadmans/components/my_button.dart';
+//import 'package:Deadmans/components/my_button.dart';
 import 'package:Deadmans/components/my_textfield.dart';
 import 'catalogo.dart';
 
@@ -30,18 +30,18 @@ class LoginPage extends StatelessWidget {
               const Icon(
                 color: Colors.white,
                 Icons.book_rounded,
-                size: 100,
+                size: 125,
               ),
 
-              const SizedBox(height: 50),
+              const SizedBox(height: 20),
 
               //Welcome
 
               Text(
-                'Bienvenido Viajero!',
+                'DEADMANSTALES',
                 style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
+                  color: Colors.yellow,
+                  fontSize: 42,
                 ),
               ),
 
@@ -63,16 +63,22 @@ class LoginPage extends StatelessWidget {
                 obscureText: true,
               ),
 
-              const SizedBox(height: 10),
+              const SizedBox(height: 15),
 
               //Sing in
-
+              Text(
+                'Bienvenido Viajero!',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                ),
+              ),
 /*
               MyButton(
                 onTap: signUserIn,
               ),
 */
-              const SizedBox(height: 50),
+              const SizedBox(height: 20),
 
               GestureDetector(
                 onTap: () => Navigator.pushReplacement(
@@ -90,7 +96,7 @@ class LoginPage extends StatelessWidget {
                     color: const Color.fromARGB(255, 255, 255, 255),
                   ),
                   child: const Text(
-                    "Inicia Sesión",
+                    "Iniciar Sesión",
                     style: TextStyle(
                       color: Colors.black,
                       // fontWeight: FontWeight.bold,

@@ -1,9 +1,9 @@
-import 'package:Deadmans/pages/cart_page.dart';
 import 'package:flutter/material.dart';
 import 'BottomNavigation.dart';
 import 'ItemsList.dart';
-import 'historial.dart';
-import 'home_page.dart';
+import 'package:Deadmans/components/model/cart_model.dart';
+
+import 'package:provider/provider.dart';
 
 void main() => runApp(MyApp());
 
@@ -47,7 +47,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
         body: ListView(
           children: <Widget>[
             Container(
-              height: 150,
+              height: 80,
               color: Colors.white,
               child: ListView(
                 padding: EdgeInsets.only(left: 20),
@@ -63,6 +63,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
                   SizedBox(
                     height: 20,
                   ),
+                  /*
                   TabBar(
                     controller: _tabController,
                     indicatorColor: Colors.transparent,
@@ -80,85 +81,24 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
                       ),
                     ],
                   )
+                  */
                 ],
               ),
             ),
             Container(
               width: double.infinity,
-              height: 290,
+              height: 400,
               child: TabBarView(controller: _tabController, children: [
                 ItemsList(),
                 ItemsList(),
                 ItemsList(),
               ]),
             ),
-            Container(
-              width: double.infinity,
-              height: 290,
-              child: TabBarView(controller: _tabController, children: [
-                GestureDetector(
-                  onTap: () => Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return CartPage();
-                      },
-                    ),
-                  ),
-                  child: Container(
-                    padding: const EdgeInsets.all(24),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16),
-                      color: const Color.fromARGB(255, 112, 91, 222),
-                    ),
-                    child: const Text(
-                      "Get Started",
-                      style: TextStyle(
-                        color: Colors.white,
-                        // fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                      ),
-                    ),
-                  ),
-                ),
-              ]),
-            ),
-            Container(
-              width: double.infinity,
-              height: 290,
-              child: TabBarView(controller: _tabController, children: [
-                GestureDetector(
-                  onTap: () => Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return HomePage();
-                      },
-                    ),
-                  ),
-                  child: Container(
-                    padding: const EdgeInsets.all(24),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16),
-                      color: const Color.fromARGB(255, 112, 91, 222),
-                    ),
-                    child: const Text(
-                      "Get Started",
-                      style: TextStyle(
-                        color: Colors.white,
-                        // fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                      ),
-                    ),
-                  ),
-                ),
-              ]),
-            ), //CookieItems(),
           ],
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
-          backgroundColor: Colors.red[700], //olor(0xFFf17422),
+          backgroundColor: Colors.brown[700], //olor(0xFFf17422),
           child: Icon(Icons.add_shopping_cart),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
